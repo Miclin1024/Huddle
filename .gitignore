@@ -89,4 +89,5 @@ fastlane/test_output
 
 iOSInjectionProject/
 GoogleService-Info.plist
-# Secrets.plist
+Secrets.plist
+Design\ Exports/
