@@ -1,0 +1,51 @@
+PODS:
+  - GoogleMaps (3.8.0):
+    - GoogleMaps/Maps (= 3.8.0)
+  - GoogleMaps/Base (3.8.0)
+  - GoogleMaps/Maps (3.8.0):
+    - GoogleMaps/Base
+  - GooglePlaces (3.8.0):
+    - GoogleMaps/Base (= 3.8.0)
+  - Kingfisher (5.13.1):
+    - Kingfisher/Core (= 5.13.1)
+  - Kingfisher/Core (5.13.1)
+  - lottie-ios (3.1.6)
+  - Spring (1.0.6)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - GooglePlaces
+  - Kingfisher
+  - lottie-ios
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - GoogleMaps
+    - GooglePlaces
+    - Kingfisher
+    - lottie-ios
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 50d92a5b9e08848387ae95bf44c6ad20834f7083
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
+  GooglePlaces: d5f70c3e9e427964fdeca1301a665d276ccd8754
+  Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
+  lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
+  Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 0e85a4e4342dbe36fabe1e419205e4b3cb00f1c2
+
+COCOAPODS: 1.8.4
