@@ -13,5 +13,6 @@ target 'Huddle' do
   pod 'GooglePlaces'
   pod 'Kingfisher'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'FloatingPanel'
 
 end

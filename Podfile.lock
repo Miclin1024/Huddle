@@ -1,4 +1,5 @@
 PODS:
+  - FloatingPanel (1.7.4)
   - GoogleMaps (3.8.0):
     - GoogleMaps/Maps (= 3.8.0)
   - GoogleMaps/Base (3.8.0)
@@ -15,6 +16,7 @@ PODS:
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - FloatingPanel
   - GoogleMaps
   - GooglePlaces
   - Kingfisher
@@ -25,6 +27,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - FloatingPanel
     - GoogleMaps
     - GooglePlaces
     - Kingfisher
@@ -42,6 +45,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  FloatingPanel: 3c9d0e30fe350e1613157557769d2ec97f76b96b
   GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
   GooglePlaces: d5f70c3e9e427964fdeca1301a665d276ccd8754
   Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
@@ -50,6 +54,6 @@ SPEC CHECKSUMS:
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 8f5a85d59a545b718caf75b364c59d0f9c71f4f3
+PODFILE CHECKSUM: bed27b13ca4c132a68820c4c6934dbb15884e682
 
 COCOAPODS: 1.8.4

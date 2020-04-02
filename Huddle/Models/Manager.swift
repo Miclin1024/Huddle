@@ -7,8 +7,19 @@
 //
 
 import Foundation
+import CoreLocation
 
 class Manager {
     
     static let shared = Manager()
+    
+    var locationManager = CLLocationManager()
+    var currentLocation: CLLocation?
+    
+    init() {
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.distanceFilter = 10
+        locationManager.startUpdatingLocation()
+    }
 }

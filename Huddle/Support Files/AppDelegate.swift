@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
+import GooglePlaces
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        var secrets: NSDictionary?
+        if let path = Bundle.main.path(forResource: "Secrets", ofType: "plist") {
+            secrets = NSDictionary(contentsOfFile: path)!
+            GMSPlacesClient.provideAPIKey(secrets!.object(forKey: "GMSKey") as! String)
+            GMSServices.provideAPIKey(secrets!.object(forKey: "GMSKey") as! String)
+        }
+        
         return true
     }
 
