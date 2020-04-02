@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     
     var mapView: GMSMapView!
     var fpController: FloatingPanelController!
+    var huddlePanelVC: HuddlePanelVC!
     var currentLocationLock: Bool = true
     
     override func viewDidLoad() {
@@ -38,14 +39,18 @@ class MainViewController: UIViewController {
         self.view.addSubview(fpController.view)
         fpController.view.bounds = self.view.frame
         fpController.delegate = self
+        fpController.surfaceView.cornerRadius = 9.0
+        fpController.surfaceView.shadowHidden = false
+        fpController.surfaceView.backgroundColor = .clear
         fpController.view.translatesAutoresizingMaskIntoConstraints = false
-        fpController.view.clipsToBounds = false
         NSLayoutConstraint.activate([
             fpController.view.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0.0),
           fpController.view.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0.0),
           fpController.view.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0.0),
           fpController.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0.0),
         ])
+        huddlePanelVC = storyboard?.instantiateViewController(withIdentifier: "HuddlePanel") as? HuddlePanelVC
+        fpController.set(contentViewController: huddlePanelVC)
         self.addChild(fpController)
         fpController.show(animated: true) {
             self.fpController.didMove(toParent: self)
@@ -94,4 +99,8 @@ class CustomFPLayout: FloatingPanelLayout {
             default: return nil // Or `case .hidden: return nil`
         }
     }
+}
+
+class HuddlePanelVC: UIViewController {
+    
 }

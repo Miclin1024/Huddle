@@ -22,5 +22,36 @@
             </objects>
             <point key="canvasLocation" x="60" y="118"/>
         </scene>
+        <!--Huddle PanelVC-->
+        <scene sceneID="zgp-Qm-ujQ">
+            <objects>
+                <viewController storyboardIdentifier="HuddlePanel" id="g8Z-Gs-OJ9" customClass="HuddlePanelVC" customModule="Huddle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xwr-tv-S1X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6k-MO-xcR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oRv-ni-ETn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W6k-MO-xcR" firstAttribute="top" secondItem="Xwr-tv-S1X" secondAttribute="top" id="4zT-SM-Qkh"/>
+                            <constraint firstAttribute="trailing" secondItem="W6k-MO-xcR" secondAttribute="trailing" id="C3m-D6-fBd"/>
+                            <constraint firstAttribute="bottom" secondItem="W6k-MO-xcR" secondAttribute="bottom" id="HLZ-ac-Jys"/>
+                            <constraint firstItem="W6k-MO-xcR" firstAttribute="leading" secondItem="Xwr-tv-S1X" secondAttribute="leading" id="WZk-8B-ape"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BsJ-YS-3K6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZ6-pD-cf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="118"/>
+        </scene>
     </scenes>
 </document>
