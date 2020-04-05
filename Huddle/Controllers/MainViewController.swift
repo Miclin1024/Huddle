@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     var mapView: GMSMapView!
     var fpController: FloatingPanelController!
     var huddlePanelVC: HuddlePanelVC!
+    var myLocationMarker: GMSMarker!
     var currentLocationLock: Bool = true
     
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class MainViewController: UIViewController {
         
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
         mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height), camera: camera)
+        self.view.addSubview(mapView)
         do {
             if let styleURL = Bundle.main.url(forResource: "MapStyle", withExtension: "json") {
               mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
@@ -32,6 +34,14 @@ class MainViewController: UIViewController {
         } catch {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
+        mapView.settings.myLocationButton = true
+        mapView.padding = UIEdgeInsets(
+            top: 0,
+            left: 0,
+            bottom: 230,
+            right: 0
+        )
+        Manager.shared.locationManager.delegate = self
 
         self.view.addSubview(mapView)
         
@@ -56,7 +66,12 @@ class MainViewController: UIViewController {
             self.fpController.didMove(toParent: self)
         }
         
-        Manager.shared.locationManager.delegate = self
+        myLocationMarker = GMSMarker()
+        let icon = UIImage(named: "myLocation")
+        let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        iconView.image = icon
+        myLocationMarker.iconView = iconView
+        myLocationMarker.map = mapView
     }
     
     func addHuddleToMap(_ target: Huddle) {
@@ -71,7 +86,12 @@ extension MainViewController: CLLocationManagerDelegate {
             let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
             longitude: location.coordinate.longitude,
             zoom: 16.0)
+            CATransaction.begin()
+            CATransaction.setAnimationDuration(3.0)
+            CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: .easeInEaseOut))
+            self.myLocationMarker.position = location.coordinate
             mapView.animate(to: camera)
+            CATransaction.commit()
         }
     }
 }
@@ -94,8 +114,8 @@ class CustomFPLayout: FloatingPanelLayout {
     public func insetFor(position: FloatingPanelPosition) -> CGFloat? {
         switch position {
             case .full: return 120.0 // A top inset from safe area
-        case .half: return 230.0 // A bottom inset from the safe area
-        case .tip: return 80.0 // A bottom inset from the safe area
+            case .half: return 230.0 // A bottom inset from the safe area
+            case .tip: return 80.0 // A bottom inset from the safe area
             default: return nil // Or `case .hidden: return nil`
         }
     }

@@ -18,6 +18,7 @@
 		1AAFCF632435B6B4007F8A52 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AAFCF622435B6B4007F8A52 /* MapStyle.json */; };
 		1AAFCF652435B950007F8A52 /* Huddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFCF642435B950007F8A52 /* Huddle.swift */; };
 		1AAFCF672435B9F2007F8A52 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFCF662435B9F2007F8A52 /* User.swift */; };
+		1AAFCF69243A8178007F8A52 /* Berkeley.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 1AAFCF68243A8177007F8A52 /* Berkeley.gpx */; };
 		5E31E3BCF0675C9045F06962 /* Pods_Huddle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98D08574D02694FABFA28AB /* Pods_Huddle.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		1AAFCF622435B6B4007F8A52 /* MapStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
 		1AAFCF642435B950007F8A52 /* Huddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huddle.swift; sourceTree = "<group>"; };
 		1AAFCF662435B9F2007F8A52 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1AAFCF68243A8177007F8A52 /* Berkeley.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Berkeley.gpx; sourceTree = "<group>"; };
 		5852B72964AEB559F82FC736 /* Pods-Huddle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.release.xcconfig"; path = "Target Support Files/Pods-Huddle/Pods-Huddle.release.xcconfig"; sourceTree = "<group>"; };
 		91EFB41BD04FFE32BD6F8A3E /* Pods-Huddle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.debug.xcconfig"; path = "Target Support Files/Pods-Huddle/Pods-Huddle.debug.xcconfig"; sourceTree = "<group>"; };
 		F98D08574D02694FABFA28AB /* Pods_Huddle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Huddle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 		1A7F96F4241DA7460010A4B6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				1AAFCF68243A8177007F8A52 /* Berkeley.gpx */,
 				1A7F96EA241DA56F0010A4B6 /* Info.plist */,
 				1A7F96DC241DA56C0010A4B6 /* AppDelegate.swift */,
 				1A7F96DE241DA56C0010A4B6 /* SceneDelegate.swift */,
@@ -211,6 +214,7 @@
 				1AAFCF632435B6B4007F8A52 /* MapStyle.json in Resources */,
 				1A7F96E9241DA56F0010A4B6 /* LaunchScreen.storyboard in Resources */,
 				1A7F96E6241DA56F0010A4B6 /* Assets.xcassets in Resources */,
+				1AAFCF69243A8178007F8A52 /* Berkeley.gpx in Resources */,
 				1A7F96E4241DA56C0010A4B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
