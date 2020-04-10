@@ -76,6 +76,8 @@ class MainViewController: UIViewController {
         iconView.image = icon
         myLocationMarker.iconView = iconView
         myLocationMarker.map = mapView
+        myLocationMarker.isFlat = true
+        myLocationMarker.groundAnchor = CGPoint(x: 0.5, y: 0.5)
     }
     
 }
