@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A5B70322435A7D6001CEA3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96E0241DA56C0010A4B6 /* MainViewController.swift */; };
+		1A7DCBBD24404FD100E6B1E6 /* HuddleEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */; };
+		1A7DCBBF2440504000E6B1E6 /* MainVCFPLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */; };
 		1A7F96DD241DA56C0010A4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96DC241DA56C0010A4B6 /* AppDelegate.swift */; };
 		1A7F96DF241DA56C0010A4B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96DE241DA56C0010A4B6 /* SceneDelegate.swift */; };
 		1A7F96E4241DA56C0010A4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7F96E2241DA56C0010A4B6 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleEntryCell.swift; sourceTree = "<group>"; };
+		1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCFPLayout.swift; sourceTree = "<group>"; };
 		1A7F96D9241DA56C0010A4B6 /* Huddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7F96DC241DA56C0010A4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A7F96DE241DA56C0010A4B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		1A7F96F1241DA7130010A4B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */,
+				1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,7 +292,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAFCF652435B950007F8A52 /* Huddle.swift in Sources */,
+				1A7DCBBF2440504000E6B1E6 /* MainVCFPLayout.swift in Sources */,
 				1A7F96DD241DA56C0010A4B6 /* AppDelegate.swift in Sources */,
+				1A7DCBBD24404FD100E6B1E6 /* HuddleEntryCell.swift in Sources */,
 				1AAFCF672435B9F2007F8A52 /* User.swift in Sources */,
 				1A7F96DF241DA56C0010A4B6 /* SceneDelegate.swift in Sources */,
 				1A7F96F8241DA7B00010A4B6 /* Manager.swift in Sources */,

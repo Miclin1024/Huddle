@@ -79,6 +79,7 @@ class MainViewController: UIViewController {
     }
 }
 
+// MARK: Ext: MainViewController: CLLocationManagerDelegate
 extension MainViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if currentLocationLock {
@@ -121,6 +122,12 @@ class CustomFPLayout: FloatingPanelLayout {
     }
 }
 
+// MARK: HuddlePanelVC
 class HuddlePanelVC: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        
+    }
 }
