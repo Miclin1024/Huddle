@@ -10,9 +10,16 @@ import Foundation
 import FloatingPanel
 
 class MainVCFPLayout: FloatingPanelLayout {
-    var initialPosition: FloatingPanelPosition
-    
-    func insetFor(position: FloatingPanelPosition) -> CGFloat? {
-        <#code#>
+    public var initialPosition: FloatingPanelPosition {
+        return .half
+    }
+
+    public func insetFor(position: FloatingPanelPosition) -> CGFloat? {
+        switch position {
+            case .full: return 120.0 // A top inset from safe area
+            case .half: return 280.0 // A bottom inset from the safe area
+            case .tip: return 80.0 // A bottom inset from the safe area
+            default: return nil // Or `case .hidden: return nil`
+        }
     }
 }

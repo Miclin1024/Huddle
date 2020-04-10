@@ -7,6 +7,7 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (3.8.0):
     - GoogleMaps/Base (= 3.8.0)
+  - Haptica (3.0.2)
   - Kingfisher (5.13.1):
     - Kingfisher/Core (= 5.13.1)
   - Kingfisher/Core (5.13.1)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - FloatingPanel
   - GoogleMaps
   - GooglePlaces
+  - Haptica
   - Kingfisher
   - lottie-ios
   - SkyFloatingLabelTextField (~> 3.0)
@@ -30,6 +32,7 @@ SPEC REPOS:
     - FloatingPanel
     - GoogleMaps
     - GooglePlaces
+    - Haptica
     - Kingfisher
     - lottie-ios
     - SkyFloatingLabelTextField
@@ -48,12 +51,13 @@ SPEC CHECKSUMS:
   FloatingPanel: 3c9d0e30fe350e1613157557769d2ec97f76b96b
   GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
   GooglePlaces: d5f70c3e9e427964fdeca1301a665d276ccd8754
+  Haptica: dc206651beeca25ab4744c633fbf0ae4d1e86baf
   Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
   lottie-ios: 85ce835dd8c53e02509f20729fc7d6a4e6645a0a
   SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: bed27b13ca4c132a68820c4c6934dbb15884e682
+PODFILE CHECKSUM: ff63c5776d5310d5de0ddbcf491cfa68de37f1e3
 
 COCOAPODS: 1.8.4

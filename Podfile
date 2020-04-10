@@ -14,5 +14,6 @@ target 'Huddle' do
   pod 'Kingfisher'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'FloatingPanel'
+  pod 'Haptica'
 
 end

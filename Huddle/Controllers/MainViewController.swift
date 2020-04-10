@@ -10,6 +10,7 @@ import UIKit
 import Spring
 import GoogleMaps
 import FloatingPanel
+import Haptica
 
 class MainViewController: UIViewController {
     
@@ -35,12 +36,7 @@ class MainViewController: UIViewController {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
         mapView.settings.myLocationButton = true
-        mapView.padding = UIEdgeInsets(
-            top: 0,
-            left: 0,
-            bottom: 230,
-            right: 0
-        )
+        
         Manager.shared.locationManager.delegate = self
 
         self.view.addSubview(mapView)
@@ -49,9 +45,9 @@ class MainViewController: UIViewController {
         self.view.addSubview(fpController.view)
         fpController.view.bounds = self.view.frame
         fpController.delegate = self
-        fpController.surfaceView.cornerRadius = 9.0
         fpController.surfaceView.shadowHidden = false
         fpController.surfaceView.backgroundColor = .clear
+        fpController.surfaceView.grabberHandle.isHidden = true
         fpController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             fpController.view.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 0.0),
@@ -61,10 +57,18 @@ class MainViewController: UIViewController {
         ])
         huddlePanelVC = storyboard?.instantiateViewController(withIdentifier: "HuddlePanel") as? HuddlePanelVC
         fpController.set(contentViewController: huddlePanelVC)
+        fpController.track(scrollView: huddlePanelVC.tableView)
         self.addChild(fpController)
         fpController.show(animated: true) {
             self.fpController.didMove(toParent: self)
         }
+        
+        mapView.padding = UIEdgeInsets(
+            top: 0,
+            left: 0,
+            bottom: MainVCFPLayout().insetFor(position: .half)!,
+            right: 0
+        )
         
         myLocationMarker = GMSMarker()
         let icon = UIImage(named: "myLocation")
@@ -74,9 +78,6 @@ class MainViewController: UIViewController {
         myLocationMarker.map = mapView
     }
     
-    func addHuddleToMap(_ target: Huddle) {
-        
-    }
 }
 
 // MARK: Ext: MainViewController: CLLocationManagerDelegate
@@ -98,27 +99,11 @@ extension MainViewController: CLLocationManagerDelegate {
 }
 
 extension MainViewController: GMSMapViewDelegate {
-    
 }
 
 extension MainViewController: FloatingPanelControllerDelegate {
     func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
-        return CustomFPLayout()
-    }
-}
-
-class CustomFPLayout: FloatingPanelLayout {
-    public var initialPosition: FloatingPanelPosition {
-        return .half
-    }
-
-    public func insetFor(position: FloatingPanelPosition) -> CGFloat? {
-        switch position {
-            case .full: return 120.0 // A top inset from safe area
-            case .half: return 230.0 // A bottom inset from the safe area
-            case .tip: return 80.0 // A bottom inset from the safe area
-            default: return nil // Or `case .hidden: return nil`
-        }
+        return MainVCFPLayout()
     }
 }
 
@@ -130,4 +115,28 @@ class HuddlePanelVC: UIViewController {
     override func viewDidLoad() {
         
     }
+    
+    @IBAction func createHuddle(_ sender: Any) {
+        Haptic.impact(.rigid).generate()
+        
+    }
+}
+
+extension HuddlePanelVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
+extension HuddlePanelVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "huddleEntry") as! HuddleEntryCell
+        return cell
+    }
+    
+    
 }
