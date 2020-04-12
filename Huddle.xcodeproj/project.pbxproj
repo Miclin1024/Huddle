@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		007BF89A2442CC39000729DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 007BF8992442CC39000729DC /* GoogleService-Info.plist */; };
 		007BF89C2442D6C6000729DC /* HuddlePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BF89B2442D6C6000729DC /* HuddlePanelVC.swift */; };
+		1A15FE262442E355004E9A4B /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A15FE252442E355004E9A4B /* Secrets.plist */; };
 		1A5B70322435A7D6001CEA3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96E0241DA56C0010A4B6 /* MainViewController.swift */; };
 		1A7DCBBD24404FD100E6B1E6 /* HuddleEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */; };
 		1A7DCBBF2440504000E6B1E6 /* MainVCFPLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */; };
@@ -37,6 +38,7 @@
 		007BF8992442CC39000729DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		007BF89B2442D6C6000729DC /* HuddlePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddlePanelVC.swift; sourceTree = "<group>"; };
 		1A15FE242442D330004E9A4B /* Huddle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Huddle.entitlements; sourceTree = "<group>"; };
+		1A15FE252442E355004E9A4B /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleEntryCell.swift; sourceTree = "<group>"; };
 		1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCFPLayout.swift; sourceTree = "<group>"; };
 		1A7DCBC0244056E400E6B1E6 /* HuddleSearchBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleSearchBtn.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				1AAFCF622435B6B4007F8A52 /* MapStyle.json */,
 				1A7DCBC2244058FD00E6B1E6 /* Utils.swift */,
 				007BF8992442CC39000729DC /* GoogleService-Info.plist */,
+				1A15FE252442E355004E9A4B /* Secrets.plist */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				1A7DCBC924405B0D00E6B1E6 /* Gibson-Bold.ttf in Resources */,
 				1A7DCBCB24405B0D00E6B1E6 /* Gibson-RegularItalic.ttf in Resources */,
 				1AAFCF632435B6B4007F8A52 /* MapStyle.json in Resources */,
+				1A15FE262442E355004E9A4B /* Secrets.plist in Resources */,
 				1A7F96E9241DA56F0010A4B6 /* LaunchScreen.storyboard in Resources */,
 				1A7F96E6241DA56F0010A4B6 /* Assets.xcassets in Resources */,
 				1AAFCF69243A8178007F8A52 /* Berkeley.gpx in Resources */,
