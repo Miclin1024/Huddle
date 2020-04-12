@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		007BF89A2442CC39000729DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 007BF8992442CC39000729DC /* GoogleService-Info.plist */; };
 		007BF89C2442D6C6000729DC /* HuddlePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BF89B2442D6C6000729DC /* HuddlePanelVC.swift */; };
 		1A15FE262442E355004E9A4B /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A15FE252442E355004E9A4B /* Secrets.plist */; };
 		1A5B70322435A7D6001CEA3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96E0241DA56C0010A4B6 /* MainViewController.swift */; };
@@ -19,6 +18,7 @@
 		1A7DCBCA24405B0D00E6B1E6 /* Gibson-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC624405B0C00E6B1E6 /* Gibson-BoldItalic.ttf */; };
 		1A7DCBCB24405B0D00E6B1E6 /* Gibson-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC724405B0C00E6B1E6 /* Gibson-RegularItalic.ttf */; };
 		1A7DCBCC24405B0D00E6B1E6 /* Gibson-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC824405B0D00E6B1E6 /* Gibson-Regular.ttf */; };
+		1A7E1354244323110060F2BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A7E1353244323110060F2BC /* GoogleService-Info.plist */; };
 		1A7F96DD241DA56C0010A4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96DC241DA56C0010A4B6 /* AppDelegate.swift */; };
 		1A7F96DF241DA56C0010A4B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96DE241DA56C0010A4B6 /* SceneDelegate.swift */; };
 		1A7F96E4241DA56C0010A4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7F96E2241DA56C0010A4B6 /* Main.storyboard */; };
@@ -31,12 +31,12 @@
 		1AAFCF672435B9F2007F8A52 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFCF662435B9F2007F8A52 /* User.swift */; };
 		1AAFCF69243A8178007F8A52 /* Berkeley.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 1AAFCF68243A8177007F8A52 /* Berkeley.gpx */; };
 		1AD9E1D62440D2220086BA21 /* HuddlePanelSeperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9E1D52440D2220086BA21 /* HuddlePanelSeperator.swift */; };
-		67A3958C973D4C75079D1B61 /* Pods_Huddle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77ADCCF413BE81DFC6D3A418 /* Pods_Huddle.framework */; };
+		FC36E3FED2EE90EAC54534EF /* Pods_Huddle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5C2F74CC01E83ACF6FE9D0 /* Pods_Huddle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		007BF8992442CC39000729DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		007BF89B2442D6C6000729DC /* HuddlePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddlePanelVC.swift; sourceTree = "<group>"; };
+		16C23F8C088013362EEC3E74 /* Pods-Huddle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.debug.xcconfig"; path = "Target Support Files/Pods-Huddle/Pods-Huddle.debug.xcconfig"; sourceTree = "<group>"; };
 		1A15FE242442D330004E9A4B /* Huddle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Huddle.entitlements; sourceTree = "<group>"; };
 		1A15FE252442E355004E9A4B /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleEntryCell.swift; sourceTree = "<group>"; };
@@ -47,6 +47,7 @@
 		1A7DCBC624405B0C00E6B1E6 /* Gibson-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson-BoldItalic.ttf"; sourceTree = "<group>"; };
 		1A7DCBC724405B0C00E6B1E6 /* Gibson-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson-RegularItalic.ttf"; sourceTree = "<group>"; };
 		1A7DCBC824405B0D00E6B1E6 /* Gibson-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson-Regular.ttf"; sourceTree = "<group>"; };
+		1A7E1353244323110060F2BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A7F96D9241DA56C0010A4B6 /* Huddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7F96DC241DA56C0010A4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A7F96DE241DA56C0010A4B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,9 +63,8 @@
 		1AAFCF662435B9F2007F8A52 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1AAFCF68243A8177007F8A52 /* Berkeley.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Berkeley.gpx; sourceTree = "<group>"; };
 		1AD9E1D52440D2220086BA21 /* HuddlePanelSeperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddlePanelSeperator.swift; sourceTree = "<group>"; };
-		77ADCCF413BE81DFC6D3A418 /* Pods_Huddle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Huddle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A37B8741C5D54ED2747206A1 /* Pods-Huddle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.release.xcconfig"; path = "Target Support Files/Pods-Huddle/Pods-Huddle.release.xcconfig"; sourceTree = "<group>"; };
-		DA12EEC060F86729EAD517FD /* Pods-Huddle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.debug.xcconfig"; path = "Target Support Files/Pods-Huddle/Pods-Huddle.debug.xcconfig"; sourceTree = "<group>"; };
+		77D25649B29B82A64F19A889 /* Pods-Huddle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.release.xcconfig"; path = "Target Support Files/Pods-Huddle/Pods-Huddle.release.xcconfig"; sourceTree = "<group>"; };
+		BB5C2F74CC01E83ACF6FE9D0 /* Pods_Huddle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Huddle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67A3958C973D4C75079D1B61 /* Pods_Huddle.framework in Frameworks */,
+				FC36E3FED2EE90EAC54534EF /* Pods_Huddle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +96,7 @@
 				1A7F96DB241DA56C0010A4B6 /* Huddle */,
 				1A7F96DA241DA56C0010A4B6 /* Products */,
 				2E464CD74E9FF84C8B1002EE /* Pods */,
-				204F445F8425A97666106B94 /* Frameworks */,
+				253BE41CCBBB2A79FB8305D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +164,7 @@
 		1A7F96F4241DA7460010A4B6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				1A7E1353244323110060F2BC /* GoogleService-Info.plist */,
 				1A7DCBC424405AFC00E6B1E6 /* Fonts */,
 				1AAFCF68243A8177007F8A52 /* Berkeley.gpx */,
 				1A7F96EA241DA56F0010A4B6 /* Info.plist */,
@@ -172,16 +173,15 @@
 				1A7F96F5241DA7710010A4B6 /* Secrets.plist */,
 				1AAFCF622435B6B4007F8A52 /* MapStyle.json */,
 				1A7DCBC2244058FD00E6B1E6 /* Utils.swift */,
-				007BF8992442CC39000729DC /* GoogleService-Info.plist */,
 				1A15FE252442E355004E9A4B /* Secrets.plist */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
 		};
-		204F445F8425A97666106B94 /* Frameworks */ = {
+		253BE41CCBBB2A79FB8305D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				77ADCCF413BE81DFC6D3A418 /* Pods_Huddle.framework */,
+				BB5C2F74CC01E83ACF6FE9D0 /* Pods_Huddle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,8 +189,8 @@
 		2E464CD74E9FF84C8B1002EE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DA12EEC060F86729EAD517FD /* Pods-Huddle.debug.xcconfig */,
-				A37B8741C5D54ED2747206A1 /* Pods-Huddle.release.xcconfig */,
+				16C23F8C088013362EEC3E74 /* Pods-Huddle.debug.xcconfig */,
+				77D25649B29B82A64F19A889 /* Pods-Huddle.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -202,12 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A7F96ED241DA56F0010A4B6 /* Build configuration list for PBXNativeTarget "Huddle" */;
 			buildPhases = (
-				AA35DC2F44464C9896BFFBE0 /* [CP] Check Pods Manifest.lock */,
+				41C7409B4814928E2D9922E9 /* [CP] Check Pods Manifest.lock */,
 				1A7F96D5241DA56C0010A4B6 /* Sources */,
 				1A7F96D6241DA56C0010A4B6 /* Frameworks */,
 				1A7F96D7241DA56C0010A4B6 /* Resources */,
-				E4C83BD29608AE39B77AC394 /* [CP] Embed Pods Frameworks */,
-				9F8688F8D74E7D8B5584B3D2 /* [CP] Copy Pods Resources */,
+				F727D0665D514DF79E76E393 /* [CP] Embed Pods Frameworks */,
+				70C8482ADC6FB72CC50D8AA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,11 +261,11 @@
 				1A7DCBCB24405B0D00E6B1E6 /* Gibson-RegularItalic.ttf in Resources */,
 				1AAFCF632435B6B4007F8A52 /* MapStyle.json in Resources */,
 				1A15FE262442E355004E9A4B /* Secrets.plist in Resources */,
+				1A7E1354244323110060F2BC /* GoogleService-Info.plist in Resources */,
 				1A7F96E9241DA56F0010A4B6 /* LaunchScreen.storyboard in Resources */,
 				1A7F96E6241DA56F0010A4B6 /* Assets.xcassets in Resources */,
 				1AAFCF69243A8178007F8A52 /* Berkeley.gpx in Resources */,
 				1A7F96E4241DA56C0010A4B6 /* Main.storyboard in Resources */,
-				007BF89A2442CC39000729DC /* GoogleService-Info.plist in Resources */,
 				1A7DCBCA24405B0D00E6B1E6 /* Gibson-BoldItalic.ttf in Resources */,
 				1A7DCBCC24405B0D00E6B1E6 /* Gibson-Regular.ttf in Resources */,
 			);
@@ -274,24 +274,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9F8688F8D74E7D8B5584B3D2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Huddle/Pods-Huddle-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Huddle/Pods-Huddle-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Huddle/Pods-Huddle-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AA35DC2F44464C9896BFFBE0 /* [CP] Check Pods Manifest.lock */ = {
+		41C7409B4814928E2D9922E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,7 +296,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E4C83BD29608AE39B77AC394 /* [CP] Embed Pods Frameworks */ = {
+		70C8482ADC6FB72CC50D8AA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Huddle/Pods-Huddle-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Huddle/Pods-Huddle-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Huddle/Pods-Huddle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F727D0665D514DF79E76E393 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -490,7 +490,7 @@
 		};
 		1A7F96EE241DA56F0010A4B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA12EEC060F86729EAD517FD /* Pods-Huddle.debug.xcconfig */;
+			baseConfigurationReference = 16C23F8C088013362EEC3E74 /* Pods-Huddle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Huddle/Huddle.entitlements;
@@ -512,7 +512,7 @@
 		};
 		1A7F96EF241DA56F0010A4B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A37B8741C5D54ED2747206A1 /* Pods-Huddle.release.xcconfig */;
+			baseConfigurationReference = 77D25649B29B82A64F19A889 /* Pods-Huddle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Huddle/Huddle.entitlements;
