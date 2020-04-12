@@ -36,6 +36,7 @@
 /* Begin PBXFileReference section */
 		007BF8992442CC39000729DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		007BF89B2442D6C6000729DC /* HuddlePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddlePanelVC.swift; sourceTree = "<group>"; };
+		1A15FE242442D330004E9A4B /* Huddle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Huddle.entitlements; sourceTree = "<group>"; };
 		1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleEntryCell.swift; sourceTree = "<group>"; };
 		1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCFPLayout.swift; sourceTree = "<group>"; };
 		1A7DCBC0244056E400E6B1E6 /* HuddleSearchBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleSearchBtn.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		1A7F96DB241DA56C0010A4B6 /* Huddle */ = {
 			isa = PBXGroup;
 			children = (
+				1A15FE242442D330004E9A4B /* Huddle.entitlements */,
 				1A7F96F4241DA7460010A4B6 /* Support Files */,
 				1A7F96F3241DA73A0010A4B6 /* Resources */,
 				1A7F96F2241DA72D0010A4B6 /* Controllers */,
@@ -487,6 +489,8 @@
 			baseConfigurationReference = DA12EEC060F86729EAD517FD /* Pods-Huddle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Huddle/Huddle.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55BUFERA4K;
 				INFOPLIST_FILE = "Huddle/Support Files/Info.plist";
@@ -496,6 +500,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.miclin.Huddle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -506,6 +511,8 @@
 			baseConfigurationReference = A37B8741C5D54ED2747206A1 /* Pods-Huddle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Huddle/Huddle.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55BUFERA4K;
 				INFOPLIST_FILE = "Huddle/Support Files/Info.plist";
@@ -515,6 +522,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cc.miclin.Huddle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
