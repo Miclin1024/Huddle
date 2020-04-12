@@ -11,6 +11,7 @@ import Spring
 import GoogleMaps
 import FloatingPanel
 import Haptica
+import Firebase
 
 class MainViewController: UIViewController {
     
@@ -19,9 +20,12 @@ class MainViewController: UIViewController {
     var huddlePanelVC: HuddlePanelVC!
     var myLocationMarker: GMSMarker!
     var currentLocationLock: Bool = true
+    var huddleList: [Huddle]!               // HAS ALL HUDDLES FROM FIREBASE - NICK
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupList()
         
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
         mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height), camera: camera)
@@ -80,7 +84,33 @@ class MainViewController: UIViewController {
         myLocationMarker.groundAnchor = CGPoint(x: 0.5, y: 0.5)
     }
     
+    func setupList() {
+        huddleList = []
+        let ref = Database.database().reference()
+        let userRef = ref.child("Huddles")
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let usersDict = snapshot.value as? [String: [String: Any]] else {
+                print("Huddle Error")
+                return
+            }
+            for (huddleHash, _) in usersDict {
+                guard let userInfoDict = usersDict[huddleHash] else {
+                    print("Huddle Error 2")
+                    return
+                }
+                let name: String = userInfoDict["name"] as! String
+                let desc: String = userInfoDict["description"] as! String
+                let lat: Double = userInfoDict["lat"] as! Double
+                let long: Double = userInfoDict["long"] as! Double
+                let cur_huddle = Huddle(withLocation: CLLocation(latitude: lat, longitude: long), name: name, description: desc)
+                self.huddleList.append(cur_huddle)
+            }
+        })
+    }
+    
 }
+
+
 
 // MARK: Ext: MainViewController: CLLocationManagerDelegate
 extension MainViewController: CLLocationManagerDelegate {
@@ -107,38 +137,4 @@ extension MainViewController: FloatingPanelControllerDelegate {
     func floatingPanel(_ vc: FloatingPanelController, layoutFor newCollection: UITraitCollection) -> FloatingPanelLayout? {
         return MainVCFPLayout()
     }
-}
-
-// MARK: HuddlePanelVC
-class HuddlePanelVC: UIViewController {
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    override func viewDidLoad() {
-        
-    }
-    
-    @IBAction func createHuddle(_ sender: Any) {
-        Haptic.impact(.rigid).generate()
-        
-    }
-}
-
-extension HuddlePanelVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-}
-
-extension HuddlePanelVC: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "huddleEntry") as! HuddleEntryCell
-        return cell
-    }
-    
-    
 }

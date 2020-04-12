@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		007BF89A2442CC39000729DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 007BF8992442CC39000729DC /* GoogleService-Info.plist */; };
+		007BF89C2442D6C6000729DC /* HuddlePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BF89B2442D6C6000729DC /* HuddlePanelVC.swift */; };
 		1A5B70322435A7D6001CEA3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96E0241DA56C0010A4B6 /* MainViewController.swift */; };
 		1A7DCBBD24404FD100E6B1E6 /* HuddleEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */; };
 		1A7DCBBF2440504000E6B1E6 /* MainVCFPLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		007BF8992442CC39000729DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		007BF89B2442D6C6000729DC /* HuddlePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddlePanelVC.swift; sourceTree = "<group>"; };
 		1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleEntryCell.swift; sourceTree = "<group>"; };
 		1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCFPLayout.swift; sourceTree = "<group>"; };
 		1A7DCBC0244056E400E6B1E6 /* HuddleSearchBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleSearchBtn.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 				1A7F96E0241DA56C0010A4B6 /* MainViewController.swift */,
 				1A7F96E2241DA56C0010A4B6 /* Main.storyboard */,
 				1A7F96E7241DA56F0010A4B6 /* LaunchScreen.storyboard */,
+				007BF89B2442D6C6000729DC /* HuddlePanelVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				1A7F96F5241DA7710010A4B6 /* Secrets.plist */,
 				1AAFCF622435B6B4007F8A52 /* MapStyle.json */,
 				1A7DCBC2244058FD00E6B1E6 /* Utils.swift */,
+				007BF8992442CC39000729DC /* GoogleService-Info.plist */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 				1A7F96E6241DA56F0010A4B6 /* Assets.xcassets in Resources */,
 				1AAFCF69243A8178007F8A52 /* Berkeley.gpx in Resources */,
 				1A7F96E4241DA56C0010A4B6 /* Main.storyboard in Resources */,
+				007BF89A2442CC39000729DC /* GoogleService-Info.plist in Resources */,
 				1A7DCBCA24405B0D00E6B1E6 /* Gibson-BoldItalic.ttf in Resources */,
 				1A7DCBCC24405B0D00E6B1E6 /* Gibson-Regular.ttf in Resources */,
 			);
@@ -325,6 +332,7 @@
 				1A7DCBBF2440504000E6B1E6 /* MainVCFPLayout.swift in Sources */,
 				1A7DCBC1244056E400E6B1E6 /* HuddleSearchBtn.swift in Sources */,
 				1A7F96DD241DA56C0010A4B6 /* AppDelegate.swift in Sources */,
+				007BF89C2442D6C6000729DC /* HuddlePanelVC.swift in Sources */,
 				1A7DCBBD24404FD100E6B1E6 /* HuddleEntryCell.swift in Sources */,
 				1A7DCBC3244058FD00E6B1E6 /* Utils.swift in Sources */,
 				1AAFCF672435B9F2007F8A52 /* User.swift in Sources */,

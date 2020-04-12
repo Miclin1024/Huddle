@@ -10,11 +10,12 @@ import UIKit
 import CoreLocation
 import GooglePlaces
 import GoogleMaps
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -24,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             GMSPlacesClient.provideAPIKey(secrets!.object(forKey: "GMSKey") as! String)
             GMSServices.provideAPIKey(secrets!.object(forKey: "GMSKey") as! String)
         }
+        
+        FirebaseApp.configure()
         
         return true
     }

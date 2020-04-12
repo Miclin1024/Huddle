@@ -10,6 +10,10 @@ import UIKit
 
 class HuddleEntryCell: UITableViewCell {
 
+    @IBOutlet weak var huddleNameLbl: UILabel!
+    @IBOutlet weak var huddleDescLbl: UILabel!
+    @IBOutlet weak var usersCountLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

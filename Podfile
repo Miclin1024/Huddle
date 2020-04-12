@@ -15,5 +15,11 @@ target 'Huddle' do
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'FloatingPanel'
   pod 'Haptica'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Database'
+
 
 end
