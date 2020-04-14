@@ -11,7 +11,6 @@ import Spring
 import GoogleMaps
 import FloatingPanel
 import Haptica
-import Firebase
 
 class MainViewController: UIViewController {
     

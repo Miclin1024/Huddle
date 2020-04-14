@@ -108,8 +108,8 @@
                                                                 <rect key="frame" x="292" y="20" width="112" height="60"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtB-F6-w9I">
-                                                                        <rect key="frame" x="36.333333333333314" y="0.0" width="39.333333333333343" height="30"/>
-                                                                        <fontDescription key="fontDescription" name="Gibson-Bold" family="Gibson" pointSize="16"/>
+                                                                        <rect key="frame" x="35.333333333333314" y="0.0" width="41.666666666666657" height="30"/>
+                                                                        <fontDescription key="fontDescription" name="Gibson-Bold" family="Gibson" pointSize="17"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
