@@ -11,19 +11,32 @@ import Spring
 import GoogleMaps
 import FloatingPanel
 import Haptica
+import Firebase
 
 // MARK: HuddlePanelVC
 class HuddlePanelVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var userProfile: UIImageView!
+    @IBOutlet weak var panelBlurEffect: UIVisualEffectView!
     
     var huddleList: [Huddle] = []
     
     override func viewDidLoad() {
         setupTableViewUpdate()
+        
+        let storage = Storage.storage()
+        
+        userProfile.layer.cornerRadius = 10
+        let userProfileStorageRef = storage.reference().child("userProfile/Miclin.jpg")
+        userProfileStorageRef.getData(maxSize: 1 * 1024 * 1024, completion: { data, error in
+            if let error = error {
+                NSLog("Error reading from firebase: \(error)")
+            } else {
+                self.userProfile.image = UIImage(data: data!)
+            }
+        })
     }
-    
-    
     
     func setupTableViewUpdate() {
         let callback = { (huddleList: [Huddle]) in

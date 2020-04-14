@@ -90,6 +90,8 @@ class MainViewController: UIViewController {
         Manager.shared.setupHuddleUpdate(completionHandler: callback)
     }
     
+    
+    
 }
 
 
