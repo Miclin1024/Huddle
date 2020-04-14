@@ -11,15 +11,17 @@ import CoreLocation
 
 class Huddle {
     
+    let identifier: String!
     let location: CLLocation!
     let name: String!
     let description: String?
-    var participants: [User] = []
+    var users: [User] = []
     
-    required init (withLocation location: CLLocation, name: String, description: String?, participants: [User] = []) {
+    required init (withLocation location: CLLocation, name: String, description: String?, users: [User] = [], identifier: String) {
         self.location = location
         self.name = name
         self.description = description
-        self.participants.append(contentsOf: participants)
+        self.users.append(contentsOf: users)
+        self.identifier = identifier
     }
 }
