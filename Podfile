@@ -20,6 +20,6 @@ target 'Huddle' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
-
+  pod 'RAMAnimatedTabBarController'
 
 end

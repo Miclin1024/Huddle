@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TNg-0T-qHu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="utu-FC-ZcR">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -15,7 +15,25 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Main View Controller-->
+        <!--Animated Tab Bar Controller-->
+        <scene sceneID="xLc-Pr-fAx">
+            <objects>
+                <tabBarController id="utu-FC-ZcR" customClass="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jhf-Dc-iGs" customClass="MainTabBar" customModule="Huddle" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TNg-0T-qHu" kind="relationship" relationship="viewControllers" id="IJV-eG-LXP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gA0-66-1XQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-958" y="196"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="vFV-dt-LFW">
             <objects>
                 <viewController id="TNg-0T-qHu" customClass="MainViewController" customModule="Huddle" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,10 +43,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VYX-sb-ZZU"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="y2Q-hf-Kxp" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLm-XH-2aV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="118"/>
+            <point key="canvasLocation" x="20" y="196"/>
         </scene>
         <!--Huddle PanelVC-->
         <scene sceneID="zgp-Qm-ujQ">
@@ -38,9 +58,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDd-gu-nsF" userLabel="Back View">
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDd-gu-nsF" userLabel="Back View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" red="0.10878638698630137" green="0.3771671660958904" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <visualEffectView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6k-MO-xcR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -112,13 +132,13 @@
                                                                 <rect key="frame" x="292" y="20" width="112" height="60"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtB-F6-w9I">
-                                                                        <rect key="frame" x="35.333333333333314" y="0.0" width="41.666666666666657" height="30"/>
+                                                                        <rect key="frame" x="34.333333333333314" y="0.0" width="43.333333333333343" height="30"/>
                                                                         <fontDescription key="fontDescription" name="Gibson-Bold" family="Gibson" pointSize="17"/>
                                                                         <color key="textColor" red="0.10588235294117647" green="0.22745098039215686" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Students" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-dK-KLf">
-                                                                        <rect key="frame" x="32" y="30" width="48.333333333333343" height="30"/>
+                                                                        <rect key="frame" x="35.333333333333314" y="30" width="41.333333333333343" height="30"/>
                                                                         <fontDescription key="fontDescription" name="Gibson-Regular" family="Gibson" pointSize="12"/>
                                                                         <color key="textColor" red="0.10588235294117647" green="0.22745098039215686" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
