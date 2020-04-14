@@ -29,7 +29,6 @@ class Manager {
      - parameter completionHandler: Callback function after Huddle list has been populated.
      */
     func setupHuddleUpdate(completionHandler: @escaping ([Huddle])->Void) {
-        var huddleList: [Huddle] = []
         let firebaseRef = Database.database().reference()
         let huddleRef = firebaseRef.child("/Huddle_instances/Berkeley")
         huddleRef.observe(.value , with: { (snapshot) in
@@ -37,7 +36,7 @@ class Manager {
                 NSLog("Error reading from firebase: malformed database format")
                 return
             }
-            
+            var huddleList: [Huddle] = []
             for (id, info) in huddleDict {
                 let name = info["name"] as! String
                 let desc = info["description"] as! String
@@ -47,7 +46,9 @@ class Manager {
                 huddleList.append(huddle)
             }
             
-            huddleList.sort(by: {$0.participants.count > $1.participants.count})
+            huddleList.sort(by: { (lhs, rhs) in
+                return lhs.users.count > rhs.users.count
+            })
             
             completionHandler(huddleList)
         })

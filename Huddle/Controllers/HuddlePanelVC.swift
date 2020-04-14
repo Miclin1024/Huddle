@@ -40,21 +40,27 @@ class HuddlePanelVC: UIViewController {
     }
 }
 
-extension HuddlePanelVC: UITableViewDelegate, UITableViewDataSource {
+extension HuddlePanelVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
+extension HuddlePanelVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return huddleList.count
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 147
-    }   
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
         let cell = tableView.dequeueReusableCell(withIdentifier: "huddleEntry") as! HuddleEntryCell
-        cell.huddleNameLbl.text = huddleList[index].name
+        cell.huddleNameLbl.text = huddleList[index].name.uppercased()
         cell.huddleDescLbl.text = huddleList[index].description
-        cell.usersCountLbl.text = "\(huddleList[index].participants.count) students present"
+        cell.usersCountLbl.text = String(huddleList[index].users.count)
         return cell
     }
-    
-    
 }
