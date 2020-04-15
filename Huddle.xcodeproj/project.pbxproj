@@ -15,10 +15,10 @@
 		1A7DCBBF2440504000E6B1E6 /* MainVCFPLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */; };
 		1A7DCBC1244056E400E6B1E6 /* HuddleSearchBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC0244056E400E6B1E6 /* HuddleSearchBtn.swift */; };
 		1A7DCBC3244058FD00E6B1E6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC2244058FD00E6B1E6 /* Utils.swift */; };
-		1A7DCBC924405B0D00E6B1E6 /* Gibson-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC524405B0C00E6B1E6 /* Gibson-Bold.ttf */; };
-		1A7DCBCA24405B0D00E6B1E6 /* Gibson-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC624405B0C00E6B1E6 /* Gibson-BoldItalic.ttf */; };
-		1A7DCBCB24405B0D00E6B1E6 /* Gibson-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC724405B0C00E6B1E6 /* Gibson-RegularItalic.ttf */; };
-		1A7DCBCC24405B0D00E6B1E6 /* Gibson-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC824405B0D00E6B1E6 /* Gibson-Regular.ttf */; };
+		1A7DCBC924405B0D00E6B1E6 /* Gibson Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC524405B0C00E6B1E6 /* Gibson Bold.ttf */; };
+		1A7DCBCA24405B0D00E6B1E6 /* Gibson BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC624405B0C00E6B1E6 /* Gibson BoldItalic.ttf */; };
+		1A7DCBCB24405B0D00E6B1E6 /* Gibson RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC724405B0C00E6B1E6 /* Gibson RegularItalic.ttf */; };
+		1A7DCBCC24405B0D00E6B1E6 /* Gibson Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DCBC824405B0D00E6B1E6 /* Gibson Regular.ttf */; };
 		1A7F96DD241DA56C0010A4B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96DC241DA56C0010A4B6 /* AppDelegate.swift */; };
 		1A7F96DF241DA56C0010A4B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96DE241DA56C0010A4B6 /* SceneDelegate.swift */; };
 		1A7F96E4241DA56C0010A4B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A7F96E2241DA56C0010A4B6 /* Main.storyboard */; };
@@ -30,6 +30,7 @@
 		1AAFCF652435B950007F8A52 /* Huddle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFCF642435B950007F8A52 /* Huddle.swift */; };
 		1AAFCF672435B9F2007F8A52 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAFCF662435B9F2007F8A52 /* User.swift */; };
 		1AAFCF69243A8178007F8A52 /* Berkeley.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 1AAFCF68243A8177007F8A52 /* Berkeley.gpx */; };
+		1AE9F2CB2446CB2F002742CD /* Gibson SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AE9F2CA2446CB2F002742CD /* Gibson SemiBold.ttf */; };
 		1AF4A540244591110076E3BA /* HuddlePanelHorizontalRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF4A53F244591110076E3BA /* HuddlePanelHorizontalRule.swift */; };
 		2B25D3547637538B794F6F66 /* Pods_Huddle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0839F201209077C076B05EA /* Pods_Huddle.framework */; };
 /* End PBXBuildFile section */
@@ -43,10 +44,10 @@
 		1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCFPLayout.swift; sourceTree = "<group>"; };
 		1A7DCBC0244056E400E6B1E6 /* HuddleSearchBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleSearchBtn.swift; sourceTree = "<group>"; };
 		1A7DCBC2244058FD00E6B1E6 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		1A7DCBC524405B0C00E6B1E6 /* Gibson-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson-Bold.ttf"; sourceTree = "<group>"; };
-		1A7DCBC624405B0C00E6B1E6 /* Gibson-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson-BoldItalic.ttf"; sourceTree = "<group>"; };
-		1A7DCBC724405B0C00E6B1E6 /* Gibson-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson-RegularItalic.ttf"; sourceTree = "<group>"; };
-		1A7DCBC824405B0D00E6B1E6 /* Gibson-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson-Regular.ttf"; sourceTree = "<group>"; };
+		1A7DCBC524405B0C00E6B1E6 /* Gibson Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson Bold.ttf"; sourceTree = "<group>"; };
+		1A7DCBC624405B0C00E6B1E6 /* Gibson BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson BoldItalic.ttf"; sourceTree = "<group>"; };
+		1A7DCBC724405B0C00E6B1E6 /* Gibson RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson RegularItalic.ttf"; sourceTree = "<group>"; };
+		1A7DCBC824405B0D00E6B1E6 /* Gibson Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson Regular.ttf"; sourceTree = "<group>"; };
 		1A7F96D9241DA56C0010A4B6 /* Huddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7F96DC241DA56C0010A4B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A7F96DE241DA56C0010A4B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		1AAFCF642435B950007F8A52 /* Huddle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Huddle.swift; sourceTree = "<group>"; };
 		1AAFCF662435B9F2007F8A52 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1AAFCF68243A8177007F8A52 /* Berkeley.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Berkeley.gpx; sourceTree = "<group>"; };
+		1AE9F2CA2446CB2F002742CD /* Gibson SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gibson SemiBold.ttf"; sourceTree = "<group>"; };
 		1AF4A53F244591110076E3BA /* HuddlePanelHorizontalRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddlePanelHorizontalRule.swift; sourceTree = "<group>"; };
 		2EFD7098C5FBEB3ADD033CDA /* Pods-Huddle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.release.xcconfig"; path = "Target Support Files/Pods-Huddle/Pods-Huddle.release.xcconfig"; sourceTree = "<group>"; };
 		48683999938477F808E9D711 /* Pods-Huddle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.debug.xcconfig"; path = "Target Support Files/Pods-Huddle/Pods-Huddle.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,10 +84,11 @@
 		1A7DCBC424405AFC00E6B1E6 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				1A7DCBC524405B0C00E6B1E6 /* Gibson-Bold.ttf */,
-				1A7DCBC624405B0C00E6B1E6 /* Gibson-BoldItalic.ttf */,
-				1A7DCBC824405B0D00E6B1E6 /* Gibson-Regular.ttf */,
-				1A7DCBC724405B0C00E6B1E6 /* Gibson-RegularItalic.ttf */,
+				1AE9F2CA2446CB2F002742CD /* Gibson SemiBold.ttf */,
+				1A7DCBC524405B0C00E6B1E6 /* Gibson Bold.ttf */,
+				1A7DCBC624405B0C00E6B1E6 /* Gibson BoldItalic.ttf */,
+				1A7DCBC824405B0D00E6B1E6 /* Gibson Regular.ttf */,
+				1A7DCBC724405B0C00E6B1E6 /* Gibson RegularItalic.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -257,16 +260,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A7F96F6241DA7710010A4B6 /* Secrets.plist in Resources */,
-				1A7DCBC924405B0D00E6B1E6 /* Gibson-Bold.ttf in Resources */,
-				1A7DCBCB24405B0D00E6B1E6 /* Gibson-RegularItalic.ttf in Resources */,
+				1A7DCBC924405B0D00E6B1E6 /* Gibson Bold.ttf in Resources */,
+				1A7DCBCB24405B0D00E6B1E6 /* Gibson RegularItalic.ttf in Resources */,
 				1AAFCF632435B6B4007F8A52 /* MapStyle.json in Resources */,
 				1A7F96E9241DA56F0010A4B6 /* LaunchScreen.storyboard in Resources */,
 				1A7F96E6241DA56F0010A4B6 /* Assets.xcassets in Resources */,
 				1AAFCF69243A8178007F8A52 /* Berkeley.gpx in Resources */,
 				1A7F96E4241DA56C0010A4B6 /* Main.storyboard in Resources */,
 				007BF89A2442CC39000729DC /* GoogleService-Info.plist in Resources */,
-				1A7DCBCA24405B0D00E6B1E6 /* Gibson-BoldItalic.ttf in Resources */,
-				1A7DCBCC24405B0D00E6B1E6 /* Gibson-Regular.ttf in Resources */,
+				1A7DCBCA24405B0D00E6B1E6 /* Gibson BoldItalic.ttf in Resources */,
+				1A7DCBCC24405B0D00E6B1E6 /* Gibson Regular.ttf in Resources */,
+				1AE9F2CB2446CB2F002742CD /* Gibson SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

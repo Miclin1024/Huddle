@@ -4,10 +4,11 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Gibson-RegularItalic</string>
-		<string>Gibson-Regular</string>
-		<string>Gibson-Bold</string>
-		<string>Gibson-BoldItalic</string>
+		<string>Gibson RegularItalic</string>
+		<string>Gibson Regular</string>
+		<string>Gibson Bold</string>
+		<string>Gibson BoldItalic</string>
+		<string>Gibson SemiBold</string>
 	</array>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>To display huddle, get direction, and find nearby study buddy.</string>

@@ -7,11 +7,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Gibson-Bold.ttf">
+        <array key="Gibson Bold.ttf">
             <string>Gibson-Bold</string>
         </array>
-        <array key="Gibson-Regular.ttf">
+        <array key="Gibson Regular.ttf">
             <string>Gibson-Regular</string>
+        </array>
+        <array key="Gibson SemiBold.ttf">
+            <string>GibsonW04-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -113,7 +116,7 @@
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itb-ks-dMQ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="242" height="60"/>
-                                                                        <fontDescription key="fontDescription" name="Gibson-Bold" family="Gibson" pointSize="20"/>
+                                                                        <fontDescription key="fontDescription" name="GibsonW04-SemiBold" family="GibsonW04-SemiBold" pointSize="19"/>
                                                                         <color key="textColor" red="0.10588235294117647" green="0.22745098039215686" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
