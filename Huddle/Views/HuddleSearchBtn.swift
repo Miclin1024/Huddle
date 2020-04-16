@@ -27,7 +27,7 @@ class HuddleSearchBtn: UIButton {
         gradientLayer.frame = self.bounds
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
-        gradientLayer.colors = [UIColor(hex: "#5574f7").cgColor, UIColor(hex: "#60c3ff").cgColor]
+        gradientLayer.colors = [UIColor(hex: "#4f73ff").cgColor, UIColor(hex: "#33c4ff").cgColor]
         self.layer.addSublayer(gradientLayer)
     }
 }

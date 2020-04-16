@@ -36,7 +36,6 @@ class MainViewController: UIViewController {
         } catch {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
-        mapView.settings.myLocationButton = true
         
         Manager.shared.locationManager.delegate = self
 
@@ -73,7 +72,7 @@ class MainViewController: UIViewController {
         
         myLocationMarker = GMSMarker()
         let icon = UIImage(named: "myLocation")
-        let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
         iconView.image = icon
         myLocationMarker.iconView = iconView
         myLocationMarker.map = mapView
