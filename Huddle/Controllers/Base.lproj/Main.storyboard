@@ -511,7 +511,7 @@
                                 </accessibility>
                                 <state key="normal" title="&lt; Back" image="xmark.circle.fill" catalog="system"/>
                                 <connections>
-                                    <action selector="back:" destination="D2l-hO-iBE" eventType="touchUpInside" id="Eb6-vl-GX3"/>
+                                    <action selector="backBtn:" destination="D2l-hO-iBE" eventType="touchUpInside" id="GBx-Tb-3c7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nym-mV-O7W">
@@ -535,16 +535,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgj-pU-vA8">
-                                <rect key="frame" x="147" y="624" width="120" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Join Huddle"/>
-                            </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AVG-tz-ycY">
-                                <rect key="frame" x="43" y="273" width="328" height="305"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTb-Cj-H7r">
                                 <rect key="frame" x="43" y="236" width="328" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -552,15 +542,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AVG-tz-ycY">
+                                <rect key="frame" x="43" y="273" width="328" height="305"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgj-pU-vA8">
+                                <rect key="frame" x="147" y="624" width="120" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Join Huddle"/>
+                                <connections>
+                                    <action selector="joinBtn:" destination="D2l-hO-iBE" eventType="touchUpInside" id="pXO-Zu-G89"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="2oC-KK-KJZ"/>
                     </view>
                     <connections>
-                        <outlet property="huddleHostLbl" destination="nLy-Oa-som" id="3Um-Om-dZk"/>
-                        <outlet property="huddleLocation" destination="GTb-Cj-H7r" id="R86-Cb-ctL"/>
-                        <outlet property="huddleNameLbl" destination="nym-mV-O7W" id="0jY-yA-2G1"/>
-                        <outlet property="huddleUserCount" destination="Dvo-1c-mI6" id="LbP-x8-Bi1"/>
+                        <outlet property="hostLbl" destination="nLy-Oa-som" id="2xq-cI-eGw"/>
+                        <outlet property="locLbl" destination="GTb-Cj-H7r" id="Vfn-nr-37l"/>
+                        <outlet property="nameLbl" destination="nym-mV-O7W" id="vAZ-Q9-lg1"/>
+                        <outlet property="userLbl" destination="Dvo-1c-mI6" id="Uma-Aj-E4H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BYF-Jq-evQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
