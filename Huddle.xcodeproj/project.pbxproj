@@ -114,7 +114,6 @@
 		1A7F96DB241DA56C0010A4B6 /* Huddle */ = {
 			isa = PBXGroup;
 			children = (
-				1A2202FC2443D218009FD240 /* Huddle.entitlements */,
 				1A7F96F4241DA7460010A4B6 /* Support Files */,
 				1A7F96F3241DA73A0010A4B6 /* Resources */,
 				1A7F96F2241DA72D0010A4B6 /* Controllers */,
@@ -176,6 +175,7 @@
 				1A7F96F5241DA7710010A4B6 /* Secrets.plist */,
 				1AAFCF622435B6B4007F8A52 /* MapStyle.json */,
 				1A7DCBC2244058FD00E6B1E6 /* Utils.swift */,
+				1A2202FC2443D218009FD240 /* Huddle.entitlements */,
 				007BF8992442CC39000729DC /* GoogleService-Info.plist */,
 			);
 			path = "Support Files";
@@ -497,7 +497,7 @@
 			baseConfigurationReference = 48683999938477F808E9D711 /* Pods-Huddle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Huddle/Huddle.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Huddle/Support Files/Huddle.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55BUFERA4K;
 				INFOPLIST_FILE = "Huddle/Support Files/Info.plist";
@@ -517,7 +517,7 @@
 			baseConfigurationReference = 2EFD7098C5FBEB3ADD033CDA /* Pods-Huddle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Huddle/Huddle.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Huddle/Support Files/Huddle.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55BUFERA4K;
 				INFOPLIST_FILE = "Huddle/Support Files/Info.plist";
