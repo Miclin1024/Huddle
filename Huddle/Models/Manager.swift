@@ -42,7 +42,9 @@ class Manager {
                 let desc = info["description"] as! String
                 let lat: Double = info["lat"] as! Double
                 let long: Double = info["long"] as! Double
-                let huddle = Huddle(withLocation: CLLocation(latitude: lat, longitude: long), name: name, description: desc, identifier: id)
+                let host: String = info["host"] as! String
+                let locLol: String = info["location"] as! String
+                let huddle = Huddle(withLocation: CLLocation(latitude: lat, longitude: long), locString: locLol, name: name, description: desc, host: host, identifier: id)
                 huddleList.append(huddle)
             }
             

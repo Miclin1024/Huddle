@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		007BF89A2442CC39000729DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 007BF8992442CC39000729DC /* GoogleService-Info.plist */; };
 		007BF89C2442D6C6000729DC /* HuddlePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BF89B2442D6C6000729DC /* HuddlePanelVC.swift */; };
+		00FDC78A244962AF00AF70D9 /* HuddleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDC789244962AF00AF70D9 /* HuddleDetailVC.swift */; };
+		00FDC78C2449723000AF70D9 /* AddHuddleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDC78B2449723000AF70D9 /* AddHuddleVC.swift */; };
+		00FDC78E2449861500AF70D9 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDC78D2449861500AF70D9 /* SignInVC.swift */; };
+		00FDC7902449896300AF70D9 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDC78F2449896300AF70D9 /* RegisterVC.swift */; };
 		1A5B70322435A7D6001CEA3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96E0241DA56C0010A4B6 /* MainViewController.swift */; };
 		1A6402A12445AC150082368C /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6402A02445AC150082368C /* MainTabBar.swift */; };
 		1A7DCBBD24404FD100E6B1E6 /* HuddleEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */; };
@@ -38,6 +42,10 @@
 /* Begin PBXFileReference section */
 		007BF8992442CC39000729DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		007BF89B2442D6C6000729DC /* HuddlePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddlePanelVC.swift; sourceTree = "<group>"; };
+		00FDC789244962AF00AF70D9 /* HuddleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleDetailVC.swift; sourceTree = "<group>"; };
+		00FDC78B2449723000AF70D9 /* AddHuddleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHuddleVC.swift; sourceTree = "<group>"; };
+		00FDC78D2449861500AF70D9 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		00FDC78F2449896300AF70D9 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		1A2202FC2443D218009FD240 /* Huddle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Huddle.entitlements; sourceTree = "<group>"; };
 		1A6402A02445AC150082368C /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleEntryCell.swift; sourceTree = "<group>"; };
@@ -153,6 +161,10 @@
 				1A7F96E2241DA56C0010A4B6 /* Main.storyboard */,
 				1A7F96E7241DA56F0010A4B6 /* LaunchScreen.storyboard */,
 				007BF89B2442D6C6000729DC /* HuddlePanelVC.swift */,
+				00FDC789244962AF00AF70D9 /* HuddleDetailVC.swift */,
+				00FDC78B2449723000AF70D9 /* AddHuddleVC.swift */,
+				00FDC78D2449861500AF70D9 /* SignInVC.swift */,
+				00FDC78F2449896300AF70D9 /* RegisterVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -344,10 +356,14 @@
 				1A7DCBBF2440504000E6B1E6 /* MainVCFPLayout.swift in Sources */,
 				1A7DCBC1244056E400E6B1E6 /* HuddleSearchBtn.swift in Sources */,
 				1A7F96DD241DA56C0010A4B6 /* AppDelegate.swift in Sources */,
+				00FDC7902449896300AF70D9 /* RegisterVC.swift in Sources */,
 				007BF89C2442D6C6000729DC /* HuddlePanelVC.swift in Sources */,
 				1A7DCBBD24404FD100E6B1E6 /* HuddleEntryCell.swift in Sources */,
+				00FDC78C2449723000AF70D9 /* AddHuddleVC.swift in Sources */,
 				1A7DCBC3244058FD00E6B1E6 /* Utils.swift in Sources */,
+				00FDC78A244962AF00AF70D9 /* HuddleDetailVC.swift in Sources */,
 				1AAFCF672435B9F2007F8A52 /* User.swift in Sources */,
+				00FDC78E2449861500AF70D9 /* SignInVC.swift in Sources */,
 				1A7F96DF241DA56C0010A4B6 /* SceneDelegate.swift in Sources */,
 				1A7F96F8241DA7B00010A4B6 /* Manager.swift in Sources */,
 				1AF4A540244591110076E3BA /* HuddlePanelHorizontalRule.swift in Sources */,

@@ -20,6 +20,8 @@ class HuddlePanelVC: UIViewController {
     @IBOutlet weak var userProfile: UIImageView!
     @IBOutlet weak var panelBlurEffect: UIVisualEffectView!
     
+    var huddleDetailVC: HuddleDetailVC!
+    var addHuddleVC: AddHuddleVC!
     var huddleList: [Huddle] = []
     
     override func viewDidLoad() {
@@ -49,6 +51,9 @@ class HuddlePanelVC: UIViewController {
     @IBAction func createHuddle(_ sender: Any) {
         Haptic.impact(.rigid).generate()
         
+        addHuddleVC = storyboard?.instantiateViewController(withIdentifier: "AddHuddle") as? AddHuddleVC
+        addHuddleVC.modalPresentationStyle = .overCurrentContext
+        self.present(addHuddleVC, animated: true, completion: nil)
     }
 }
 
@@ -58,7 +63,14 @@ extension HuddlePanelVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let index = indexPath.row
+        huddleDetailVC = storyboard?.instantiateViewController(withIdentifier: "HuddleDetail") as? HuddleDetailVC
+        huddleDetailVC.modalPresentationStyle = .overCurrentContext
+        huddleDetailVC.huddleName = huddleList[index].name
+        huddleDetailVC.huddleHost = huddleList[index].host
+        huddleDetailVC.huddleLoc = huddleList[index].locString
+        huddleDetailVC.huddleUsers = huddleList[index].users.count
+        self.present(huddleDetailVC, animated: true, completion: nil)
     }
 }
 
