@@ -72,7 +72,7 @@ class MainViewController: UIViewController {
         
         myLocationMarker = GMSMarker()
         let icon = UIImage(named: "myLocation")
-        let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         iconView.image = icon
         myLocationMarker.iconView = iconView
         myLocationMarker.map = mapView
