@@ -80,6 +80,8 @@ class MainViewController: UIViewController {
         myLocationMarker.groundAnchor = CGPoint(x: 0.5, y: 0.5)
         
         setupHuddleListUpdate()
+        
+        placeMarker(at: CLLocationCoordinate2D(latitude: 37.872541, longitude: -122.260456))
     }
     
     func setupHuddleListUpdate() {
@@ -87,6 +89,17 @@ class MainViewController: UIViewController {
             self.huddleList = huddleList
         }
         Manager.shared.setupHuddleUpdate(completionHandler: callback)
+    }
+    
+    func placeMarker(at location: CLLocationCoordinate2D) {
+        let marker = GMSMarker()
+        let icon = UIImage(named: "Huddle_CS")
+        let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 120, height: 120))
+        iconView.image = icon
+        marker.iconView = iconView
+        marker.map = self.mapView
+        marker.position = location
+        marker.appearAnimation = .pop
     }
 }
 
