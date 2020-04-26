@@ -22,6 +22,10 @@ class MainViewController: UIViewController {
     var huddleList: [Huddle] = []
     var selectedMarker: GMSMarker?
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+      return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +52,7 @@ class MainViewController: UIViewController {
             bottom: MainVCFPLayout().insetFor(position: .half)!,
             right: 0
         )
+        mapView.settings.myLocationButton = true
         
         fpController = FloatingPanelController()
         self.view.addSubview(fpController.view)
@@ -127,8 +132,13 @@ extension MainViewController: CLLocationManagerDelegate {
             CATransaction.commit()
         }
     }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        NSLog(error.localizedDescription)
+    }
 }
 
+// MARK: Ext: MainViewController: GMSMapViewDelegate
 extension MainViewController: GMSMapViewDelegate {
     func mapViewDidFinishTileRendering(_ mapView: GMSMapView) {
         if !self.view.subviews.contains(mapView) {
@@ -141,18 +151,21 @@ extension MainViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        if marker != myLocationMarker && marker != selectedMarker {
-            UIView.animate(withDuration: 0.2, delay: 0, animations: {
-                self.selectedMarker?.iconView?.transform = CGAffineTransform.identity
-                self.selectedMarker = nil
-            })
+        if marker == selectedMarker{
+            smoothMoveCamera(to: marker, withDuration: 0.8)
+        } else if marker == myLocationMarker {
+            smoothMoveCamera(to: marker, withDuration: 0.8)
+            cancelMarkerSelection()
+        } else {
+            cancelMarkerSelection()
             UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 marker.iconView?.transform = CGAffineTransform(scaleX: 1.45, y: 1.45)
                 self.selectedMarker = marker
             })
-            return true
+            smoothMoveCamera(to: marker, withDuration: 0.8)
         }
-        return false
+
+        return true
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
@@ -160,6 +173,32 @@ extension MainViewController: GMSMapViewDelegate {
             self.selectedMarker?.iconView?.transform = CGAffineTransform.identity
             self.selectedMarker = nil
         })
+    }
+    
+    func mapView(_ mapView: GMSMapView, willMove gesture: Bool) {
+        currentLocationLock = false
+    }
+    
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        currentLocationLock = true
+        smoothMoveCamera(to: myLocationMarker, withDuration: 0.8)
+        cancelMarkerSelection()
+        return true
+    }
+    
+    private func smoothMoveCamera(to marker: GMSMarker, withDuration: TimeInterval) {
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(withDuration)
+        CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: .easeInEaseOut))
+        mapView.animate(toLocation: marker.position)
+        CATransaction.commit()
+    }
+    
+    private func cancelMarkerSelection() {
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: {
+             self.selectedMarker?.iconView?.transform = CGAffineTransform.identity
+             self.selectedMarker = nil
+         })
     }
 }
 
