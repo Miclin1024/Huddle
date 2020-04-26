@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
     var myLocationMarker: GMSMarker!
     var currentLocationLock: Bool = true
     var huddleList: [Huddle] = []
+    var selectedMarker: GMSMarker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,9 +97,11 @@ class MainViewController: UIViewController {
     
     func placeMarker(at location: CLLocationCoordinate2D) {
         let marker = GMSMarker()
-        let icon = UIImage(named: "Huddle_CS")
-        let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 120, height: 120))
+        let icon = UIImage(named: "huddleMarker_empty")
+        let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        iconView.contentMode = .scaleAspectFit
         iconView.image = icon
+        iconView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.0)
         marker.iconView = iconView
         marker.map = self.mapView
         marker.position = location
@@ -135,6 +138,28 @@ extension MainViewController: GMSMapViewDelegate {
                 mapView.alpha = 1
             })
         }
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        if marker != myLocationMarker && marker != selectedMarker {
+            UIView.animate(withDuration: 0.2, delay: 0, animations: {
+                self.selectedMarker?.iconView?.transform = CGAffineTransform.identity
+                self.selectedMarker = nil
+            })
+            UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                marker.iconView?.transform = CGAffineTransform(scaleX: 1.45, y: 1.45)
+                self.selectedMarker = marker
+            })
+            return true
+        }
+        return false
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.selectedMarker?.iconView?.transform = CGAffineTransform.identity
+            self.selectedMarker = nil
+        })
     }
 }
 
