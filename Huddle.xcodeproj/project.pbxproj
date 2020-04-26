@@ -93,6 +93,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A0A38E924558F3500502037 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				1A0A38E52455065B00502037 /* HuddleMarkerView.swift */,
+				1A6402A02445AC150082368C /* MainTabBar.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		1A0A38EA24558F6100502037 /* HuddlePanelView */ = {
+			isa = PBXGroup;
+			children = (
+				1AF4A53F244591110076E3BA /* HuddlePanelHorizontalRule.swift */,
+				1A7DCBC0244056E400E6B1E6 /* HuddleSearchBtn.swift */,
+				1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */,
+				1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */,
+			);
+			path = HuddlePanelView;
+			sourceTree = "<group>";
+		};
 		1A7DCBC424405AFC00E6B1E6 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,12 +168,8 @@
 		1A7F96F1241DA7130010A4B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */,
-				1A7DCBBE2440504000E6B1E6 /* MainVCFPLayout.swift */,
-				1A7DCBC0244056E400E6B1E6 /* HuddleSearchBtn.swift */,
-				1AF4A53F244591110076E3BA /* HuddlePanelHorizontalRule.swift */,
-				1A6402A02445AC150082368C /* MainTabBar.swift */,
-				1A0A38E52455065B00502037 /* HuddleMarkerView.swift */,
+				1A0A38EA24558F6100502037 /* HuddlePanelView */,
+				1A0A38E924558F3500502037 /* MainView */,
 			);
 			path = Views;
 			sourceTree = "<group>";

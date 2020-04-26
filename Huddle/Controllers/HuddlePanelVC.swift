@@ -25,7 +25,11 @@ class HuddlePanelVC: UIViewController {
     var huddleList: [Huddle] = []
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         setupTableViewUpdate()
+        tableView.allowsMultipleSelection = false
+        tableView.allowsSelection = true
         
         let storage = Storage.storage()
         
@@ -38,6 +42,14 @@ class HuddlePanelVC: UIViewController {
                 self.userProfile.image = UIImage(data: data!)
             }
         })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let selected = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selected, animated: true)
+        }
     }
     
     func setupTableViewUpdate() {
@@ -72,6 +84,8 @@ extension HuddlePanelVC: UITableViewDelegate {
         huddleDetailVC.huddleUsers = huddleList[index].users.count
         self.present(huddleDetailVC, animated: true, completion: nil)
     }
+    
+    
 }
 
 extension HuddlePanelVC: UITableViewDataSource {
