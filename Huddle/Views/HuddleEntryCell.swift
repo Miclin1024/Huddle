@@ -16,6 +16,9 @@ class HuddleEntryCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        huddleDescLbl.textColor = .white
+        huddleNameLbl.textColor = .white
+        usersCountLbl.textColor = .white
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

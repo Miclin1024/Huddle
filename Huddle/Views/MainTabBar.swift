@@ -21,11 +21,6 @@ class MainTabBar: UITabBar {
     }
 
     func setup() {
-        layer.shadowOffset = .zero
-        layer.shadowRadius = 5
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.1
-        layer.shouldRasterize = true
-        layer.rasterizationScale = UIScreen.main.scale
+
     }
 }

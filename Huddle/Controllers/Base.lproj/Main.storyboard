@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="utu-FC-ZcR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="utu-FC-ZcR">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -176,16 +176,16 @@
             </objects>
             <point key="canvasLocation" x="-1865.217391304348" y="643.52678571428567"/>
         </scene>
-        <!--Animated Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="xLc-Pr-fAx">
             <objects>
-                <tabBarController wantsFullScreenLayout="YES" id="utu-FC-ZcR" customClass="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                <tabBarController wantsFullScreenLayout="YES" id="utu-FC-ZcR" customClass="TabBarController" customModule="Huddle" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="jsK-Z8-siB"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jhf-Dc-iGs" customClass="MainTabBar" customModule="Huddle" customModuleProvider="target">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Jhf-Dc-iGs" customClass="MainTabBar" customModule="Huddle" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.094117647058823528" green="0.12156862745098039" blue="0.16470588235294117" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.098039215686274508" green="0.12156862745098039" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="TNg-0T-qHu" kind="relationship" relationship="viewControllers" id="IJV-eG-LXP"/>
@@ -202,7 +202,7 @@
                     <view key="view" contentMode="scaleToFill" id="JgN-Nu-Sjk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.14117647058823529" green="0.18431372549019609" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="VYX-sb-ZZU"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="y2Q-hf-Kxp" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
@@ -220,10 +220,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDd-gu-nsF" userLabel="Back View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <visualEffectView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6k-MO-xcR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <view key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oRv-ni-ETn">
@@ -302,7 +298,7 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Students" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-dK-KLf">
                                                                         <rect key="frame" x="35.333333333333314" y="30" width="41.333333333333343" height="30"/>
                                                                         <fontDescription key="fontDescription" name="Gibson-Regular" family="Gibson" pointSize="12"/>
-                                                                        <color key="textColor" red="0.10588235294117647" green="0.22745098039215686" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
@@ -369,19 +365,15 @@
                                     </constraints>
                                 </view>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.97647058823529409" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <blurEffect style="extraLight"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="RDd-gu-nsF" firstAttribute="leading" secondItem="Xwr-tv-S1X" secondAttribute="leading" id="4Pc-A2-YAe"/>
                             <constraint firstItem="W6k-MO-xcR" firstAttribute="top" secondItem="Xwr-tv-S1X" secondAttribute="top" id="4zT-SM-Qkh"/>
                             <constraint firstAttribute="trailing" secondItem="W6k-MO-xcR" secondAttribute="trailing" id="C3m-D6-fBd"/>
-                            <constraint firstAttribute="bottom" secondItem="RDd-gu-nsF" secondAttribute="bottom" id="Czk-y2-761"/>
                             <constraint firstAttribute="bottom" secondItem="W6k-MO-xcR" secondAttribute="bottom" id="HLZ-ac-Jys"/>
-                            <constraint firstItem="RDd-gu-nsF" firstAttribute="top" secondItem="Xwr-tv-S1X" secondAttribute="top" id="Qu0-nV-kwn"/>
                             <constraint firstItem="W6k-MO-xcR" firstAttribute="leading" secondItem="Xwr-tv-S1X" secondAttribute="leading" id="WZk-8B-ape"/>
-                            <constraint firstAttribute="trailing" secondItem="RDd-gu-nsF" secondAttribute="trailing" id="kIi-9r-7hE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BsJ-YS-3K6"/>
                     </view>
@@ -571,11 +563,11 @@
             <point key="canvasLocation" x="1731.8840579710147" y="-247.09821428571428"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="person.crop.circle.badge.plus" catalog="system" width="64" height="50"/>
-        <image name="xmark.circle.fill" catalog="system" width="64" height="60"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oXU-Hi-N5I"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="101"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

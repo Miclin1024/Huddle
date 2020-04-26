@@ -13,6 +13,8 @@
 		00FDC78E2449861500AF70D9 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDC78D2449861500AF70D9 /* SignInVC.swift */; };
 		00FDC7902449896300AF70D9 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDC78F2449896300AF70D9 /* RegisterVC.swift */; };
 		00FDC79424498D1D00AF70D9 /* HuddleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDC79324498D1D00AF70D9 /* HuddleDetailVC.swift */; };
+		1A0A38E62455065B00502037 /* HuddleMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A38E52455065B00502037 /* HuddleMarkerView.swift */; };
+		1A0A38E82455279000502037 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0A38E72455279000502037 /* TabBarController.swift */; };
 		1A5B70322435A7D6001CEA3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F96E0241DA56C0010A4B6 /* MainViewController.swift */; };
 		1A6402A12445AC150082368C /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6402A02445AC150082368C /* MainTabBar.swift */; };
 		1A7DCBBD24404FD100E6B1E6 /* HuddleEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */; };
@@ -46,6 +48,8 @@
 		00FDC78D2449861500AF70D9 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		00FDC78F2449896300AF70D9 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		00FDC79324498D1D00AF70D9 /* HuddleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleDetailVC.swift; sourceTree = "<group>"; };
+		1A0A38E52455065B00502037 /* HuddleMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleMarkerView.swift; sourceTree = "<group>"; };
+		1A0A38E72455279000502037 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1A2202FC2443D218009FD240 /* Huddle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Huddle.entitlements; sourceTree = "<group>"; };
 		1A6402A02445AC150082368C /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		1A7DCBBC24404FD100E6B1E6 /* HuddleEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuddleEntryCell.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				1A7DCBC0244056E400E6B1E6 /* HuddleSearchBtn.swift */,
 				1AF4A53F244591110076E3BA /* HuddlePanelHorizontalRule.swift */,
 				1A6402A02445AC150082368C /* MainTabBar.swift */,
+				1A0A38E52455065B00502037 /* HuddleMarkerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				00FDC78B2449723000AF70D9 /* AddHuddleVC.swift */,
 				00FDC78D2449861500AF70D9 /* SignInVC.swift */,
 				00FDC78F2449896300AF70D9 /* RegisterVC.swift */,
+				1A0A38E72455279000502037 /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -358,9 +364,11 @@
 				1A7F96DD241DA56C0010A4B6 /* AppDelegate.swift in Sources */,
 				00FDC7902449896300AF70D9 /* RegisterVC.swift in Sources */,
 				007BF89C2442D6C6000729DC /* HuddlePanelVC.swift in Sources */,
+				1A0A38E62455065B00502037 /* HuddleMarkerView.swift in Sources */,
 				1A7DCBBD24404FD100E6B1E6 /* HuddleEntryCell.swift in Sources */,
 				00FDC78C2449723000AF70D9 /* AddHuddleVC.swift in Sources */,
 				1A7DCBC3244058FD00E6B1E6 /* Utils.swift in Sources */,
+				1A0A38E82455279000502037 /* TabBarController.swift in Sources */,
 				00FDC79424498D1D00AF70D9 /* HuddleDetailVC.swift in Sources */,
 				1AAFCF672435B9F2007F8A52 /* User.swift in Sources */,
 				00FDC78E2449861500AF70D9 /* SignInVC.swift in Sources */,

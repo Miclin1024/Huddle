@@ -24,9 +24,14 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Manager.shared.locationManager.delegate = self
+        
+        let color = UIColor(hex: "#242f3e")
+        self.view.backgroundColor = color
+        
         let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
         mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height), camera: camera)
-        self.view.addSubview(mapView)
+        mapView.delegate = self
         do {
             if let styleURL = Bundle.main.url(forResource: "MapStyle", withExtension: "json") {
               mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
@@ -36,10 +41,12 @@ class MainViewController: UIViewController {
         } catch {
             NSLog("One or more of the map styles failed to load. \(error)")
         }
-        
-        Manager.shared.locationManager.delegate = self
-
-        self.view.addSubview(mapView)
+        mapView.padding = UIEdgeInsets(
+            top: 0,
+            left: 0,
+            bottom: MainVCFPLayout().insetFor(position: .half)!,
+            right: 0
+        )
         
         fpController = FloatingPanelController()
         self.view.addSubview(fpController.view)
@@ -63,13 +70,6 @@ class MainViewController: UIViewController {
             self.fpController.didMove(toParent: self)
         }
         
-        mapView.padding = UIEdgeInsets(
-            top: 0,
-            left: 0,
-            bottom: MainVCFPLayout().insetFor(position: .half)!,
-            right: 0
-        )
-        
         myLocationMarker = GMSMarker()
         let icon = UIImage(named: "myLocation")
         let iconView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -81,12 +81,15 @@ class MainViewController: UIViewController {
         
         setupHuddleListUpdate()
         
-        placeMarker(at: CLLocationCoordinate2D(latitude: 37.872541, longitude: -122.260456))
+        // placeMarker(at: CLLocationCoordinate2D(latitude: 37.872541, longitude: -122.260456))
     }
     
     func setupHuddleListUpdate() {
         let callback = { (huddleList: [Huddle]) in
             self.huddleList = huddleList
+            for huddle in huddleList {
+                self.placeMarker(at: huddle.location.coordinate)
+            }
         }
         Manager.shared.setupHuddleUpdate(completionHandler: callback)
     }
@@ -124,6 +127,15 @@ extension MainViewController: CLLocationManagerDelegate {
 }
 
 extension MainViewController: GMSMapViewDelegate {
+    func mapViewDidFinishTileRendering(_ mapView: GMSMapView) {
+        if !self.view.subviews.contains(mapView) {
+            mapView.alpha = 0
+            self.view.insertSubview(mapView, belowSubview: fpController.view)
+            UIView.animate(withDuration: 0.4, animations: {
+                mapView.alpha = 1
+            })
+        }
+    }
 }
 
 extension MainViewController: FloatingPanelControllerDelegate {

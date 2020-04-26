@@ -20,6 +20,7 @@ class Huddle {
     var users: [User] = []
     
     required init (withLocation location: CLLocation, locString: String, name: String, description: String?, host: String, users: [User] = [], identifier: String) {
+        
         self.location = location
         self.locString = locString
         self.name = name

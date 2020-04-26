@@ -10,7 +10,7 @@ import UIKit
 
 class HuddlePanelHorizontalRule: UIView {
 
-    let lineWidth: CGFloat = 3.0
+    let lineWidth: CGFloat = 2.0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,7 +31,7 @@ class HuddlePanelHorizontalRule: UIView {
         let hr = UIBezierPath()
         hr.move(to: CGPoint(x: 0, y: 4))
         hr.addLine(to: CGPoint(x: bounds.width, y: 4))
-        UIColor(hex: "#e2e8ed").setStroke()
+        UIColor(hex: "#39414e").setStroke()
         hr.lineWidth = lineWidth
         hr.stroke()
     }
