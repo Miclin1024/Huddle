@@ -130,6 +130,13 @@ extension MainViewController: CLLocationManagerDelegate {
             self.myLocationMarker.position = location.coordinate
             mapView.animate(to: camera)
             CATransaction.commit()
+        } else {
+            let location = locations.last!
+            CATransaction.begin()
+            CATransaction.setAnimationDuration(3.0)
+            CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: .easeInEaseOut))
+            self.myLocationMarker.position = location.coordinate
+            CATransaction.commit()
         }
     }
     
