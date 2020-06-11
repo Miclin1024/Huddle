@@ -8,25 +8,69 @@
 
 import Foundation
 import CoreLocation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
+import PromiseKit
 
-class Huddle {
+struct Huddle: Codable {
     
-    let identifier: String!
-    let location: CLLocation!
-    let name: String!
-    let description: String?
-    let host: String!
-    let locString: String!
-    var users: [User] = []
+    var description: String
+    var host: String
+    var location: GeoPoint
+    var name: String
+    var users: [String]
     
-    required init (withLocation location: CLLocation, locString: String, name: String, description: String?, host: String, users: [User] = [], identifier: String) {
-        
-        self.location = location
-        self.locString = locString
-        self.name = name
-        self.description = description
-        self.users.append(contentsOf: users)
-        self.identifier = identifier
-        self.host = host
+    static func listHuddle(where filter: (Huddle)->Bool = {_ in return true}) -> Promise<[Huddle]> {
+        return Promise { seal in
+            let database = Firestore.firestore()
+            
+        }
+    }
+    
+    /**
+    Setup dynamic update of Huddle instances with firebase, the callback is triggered whenever an update occured in Huddle instance node. The list is sorted by number of user, descending.
+     - parameter updateCallback: Callback function after Huddle list has been populated.
+     */
+    static func setupUpdate(updateCallback: @escaping ([Huddle])->Void) {
+        let database = Firestore.firestore()
+        database.collection("huddles").addSnapshotListener { querySnapshot, error in
+            if let error = error {
+                NSLog("Error fetching huddles: \(error)")
+                return
+            }
+            if let documents = querySnapshot?.documents {
+                var huddles: [Huddle] = []
+                for document in documents {
+                    let result = Swift.Result {
+                        try document.data(as: Huddle.self)
+                    }
+                    switch result {
+                    case .success(let huddle):
+                        if let huddle = huddle {
+                            huddles.append(huddle)
+                        }
+                    case .failure(let error):
+                        NSLog("Unable to decode: \(error)")
+                    }
+                }
+                
+                huddles.sort(by: { (lhs, rhs) in
+                    return lhs.users.count > rhs.users.count
+                })
+                
+                updateCallback(huddles)
+            }
+        }
+    }
+    
+    enum HuddleQueryError: Error {
+        case DecodeError(Error)
+        case HuddleNotFound
+    }
+}
+
+extension GeoPoint {
+    public func toCLLocationCoordinate2D() -> CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
     }
 }

@@ -57,7 +57,7 @@ class HuddlePanelVC: UIViewController {
             self.huddleList = huddleList
             self.tableView.reloadData()
         }
-        Manager.shared.setupHuddleUpdate(completionHandler: callback)
+        Huddle.setupUpdate(updateCallback: callback)
     }
     
     @IBAction func createHuddle(_ sender: Any) {
@@ -80,7 +80,7 @@ extension HuddlePanelVC: UITableViewDelegate {
         huddleDetailVC.modalPresentationStyle = .overCurrentContext
         huddleDetailVC.huddleName = huddleList[index].name
         huddleDetailVC.huddleHost = huddleList[index].host
-        huddleDetailVC.huddleLoc = huddleList[index].locString
+        huddleDetailVC.huddleLoc = "" // User-friendly location string 
         huddleDetailVC.huddleUsers = huddleList[index].users.count
         self.present(huddleDetailVC, animated: true, completion: nil)
     }

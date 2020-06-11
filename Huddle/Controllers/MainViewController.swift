@@ -86,18 +86,16 @@ class MainViewController: UIViewController {
         myLocationMarker.groundAnchor = CGPoint(x: 0.5, y: 0.5)
         
         setupHuddleListUpdate()
-        
-        // placeMarker(at: CLLocationCoordinate2D(latitude: 37.872541, longitude: -122.260456))
     }
     
     func setupHuddleListUpdate() {
         let callback = { (huddleList: [Huddle]) in
             self.huddleList = huddleList
             for huddle in huddleList {
-                self.placeMarker(at: huddle.location.coordinate)
+                self.placeMarker(at: huddle.location.toCLLocationCoordinate2D())
             }
         }
-        Manager.shared.setupHuddleUpdate(completionHandler: callback)
+        Huddle.setupUpdate(updateCallback: callback)
     }
     
     func placeMarker(at location: CLLocationCoordinate2D) {

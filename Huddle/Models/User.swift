@@ -52,19 +52,19 @@ struct User: Codable {
                             self.userList.append(user)
                             seal.fulfill(user)
                         } else {
-                            seal.reject(UserAccessError.EmptyUser)
+                            seal.reject(UserQueryError.EmptyUser)
                         }
                     case .failure(let error):
-                        seal.reject(UserAccessError.DecodeError(error))
+                        seal.reject(UserQueryError.DecodeError(error))
                     }
                 } else {
-                    seal.reject(UserAccessError.UserNotFound)
+                    seal.reject(UserQueryError.UserNotFound)
                 }
             }
         }
     }
     
-    enum UserAccessError: Error {
+    enum UserQueryError: Error {
         case UserNotFound
         case DecodeError(Error)
         case EmptyUser
