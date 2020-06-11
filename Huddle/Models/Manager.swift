@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import Firebase
+import PromiseKit
 
 class Manager {
     

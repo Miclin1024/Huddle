@@ -7,44 +7,72 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
+import PromiseKit
 
-class User: Equatable {
+
+/**
+ A codable structure representing huddle user.
+ */
+struct User: Codable {
     
-    private static var userList: [User] = []
+    private(set) var UID: String
     
-    let username: String!
-    let email: String!
+    var username: String
+    var firstname: String
+    var lastname: String
+    var email: String
     
-    required init(withUsername username: String, email: String) {
-        self.username = username
-        self.email = email
-    }
+    fileprivate static var userList: [User] = []
     
     /**
-     Factory function for creating new user, identified by `username`.
-     - returns: If an user with `username` already exists in `User.userList`, return this user, otherwise create a new user instance with `username` and `email`.
+     Get a promise of the user instance identified by UID. Fetched results are cached in an array for faster access.
      */
-    static func getNewUser(withUsername username: String, email: String) -> User {
-        let existed = userList.filter({$0.username == username})
-        if existed.count == 1 {
-            return existed.first!
-        } else {
-            let user = User(withUsername: username, email: email)
-            User.userList.append(user)
-            return user
+    static func getUser(withUID UID: String) -> Promise<User> {
+        return Promise<User> { seal in
+            if let user = userList.filter({$0.UID == UID}).first {
+                seal.fulfill(user)
+                return
+            }
+            
+            let database = Firestore.firestore()
+            database.collection("users").document(UID).getDocument(source: .server) { (document, error) in
+                if let error = error {
+                    seal.reject(error)
+                    return
+                }
+                if let document = document, document.exists {
+                    let result = Swift.Result {
+                        try document.data(as: User.self)
+                    }
+                    switch result {
+                    case .success(let user):
+                        if let user = user {
+                            self.userList.append(user)
+                            seal.fulfill(user)
+                        } else {
+                            seal.reject(UserAccessError.EmptyUser)
+                        }
+                    case .failure(let error):
+                        seal.reject(UserAccessError.DecodeError(error))
+                    }
+                } else {
+                    seal.reject(UserAccessError.UserNotFound)
+                }
+            }
         }
     }
     
-    static func getUser(withUsername username: String, email: String) -> User? {
-        let existed = userList.filter({$0.username == username})
-        if existed.count == 1 {
-            return existed.first
-        } else {
-            return nil
-        }
+    enum UserAccessError: Error {
+        case UserNotFound
+        case DecodeError(Error)
+        case EmptyUser
     }
-    
+}
+
+extension User: Equatable {
     static func == (lhs: User, rhs: User) -> Bool {
-        return lhs.username == rhs.username
+        return lhs.UID == rhs.UID
     }
 }
