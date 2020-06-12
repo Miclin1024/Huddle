@@ -19,6 +19,7 @@ struct Huddle: Codable {
     var location: GeoPoint
     var name: String
     var users: [String]
+    var locationDescription: String
     
     static func listHuddle(where filter: (Huddle)->Bool = {_ in return true}) -> Promise<[Huddle]> {
         return Promise { seal in

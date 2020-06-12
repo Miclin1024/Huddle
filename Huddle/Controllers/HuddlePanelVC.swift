@@ -11,7 +11,7 @@ import Spring
 import GoogleMaps
 import FloatingPanel
 import Haptica
-import Firebase
+import FirebaseStorage
 
 // MARK: HuddlePanelVC
 class HuddlePanelVC: UIViewController {
@@ -75,13 +75,13 @@ extension HuddlePanelVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let index = indexPath.row
+        let huddle = self.huddleList[indexPath.row]
         huddleDetailVC = storyboard?.instantiateViewController(withIdentifier: "HuddleDetail") as? HuddleDetailVC
         huddleDetailVC.modalPresentationStyle = .overCurrentContext
-        huddleDetailVC.huddleName = huddleList[index].name
-        huddleDetailVC.huddleHost = huddleList[index].host
-        huddleDetailVC.huddleLoc = "" // User-friendly location string 
-        huddleDetailVC.huddleUsers = huddleList[index].users.count
+        huddleDetailVC.huddleName = huddle.name
+        huddleDetailVC.huddleHost = huddle.host
+        huddleDetailVC.huddleLoc = huddle.locationDescription
+        huddleDetailVC.huddleUsers = huddle.users.count
         self.present(huddleDetailVC, animated: true, completion: nil)
     }
     
@@ -94,11 +94,11 @@ extension HuddlePanelVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let index = indexPath.row
+        let huddle = self.huddleList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "huddleEntry") as! HuddleEntryCell
-        cell.huddleNameLbl.text = huddleList[index].name.uppercased()
-        cell.huddleDescLbl.text = huddleList[index].description
-        cell.usersCountLbl.text = String(huddleList[index].users.count)
+        cell.huddleNameLbl.text = huddle.name.uppercased()
+        cell.huddleDescLbl.text = "\(huddle.description)   -   \(huddle.locationDescription)"
+        cell.usersCountLbl.text = String(huddle.users.count)
         return cell
     }
 }
